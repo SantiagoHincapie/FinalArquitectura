@@ -7,6 +7,7 @@ import { LogInComponent } from './components/log-in/log-in.component';
 import { PrimeModule } from './prime/prime.module';
 import { MensajeComponent } from './components/mensaje/mensaje.component';
 import { LayoutComponent } from './layout/layout.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LayoutComponent } from './layout/layout.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PrimeModule
+    PrimeModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

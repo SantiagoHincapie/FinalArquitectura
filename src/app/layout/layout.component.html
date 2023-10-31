@@ -1,11 +1,11 @@
 <div class="grid p-2">
     <div class="col-12 h-screen">
-        <!-- TODO: LogIn-->
-        <log-in></log-in>
+        <log-in (enviarData)="recibirData($event)"></log-in>
     </div>
 
     <div>
         <!-- TODO: Tarjeta de verificacion-->
-        <mensaje></mensaje>
+        <mensaje></mensaje><h1>{{cedula}}</h1>
+        
     </div>
 </div>
