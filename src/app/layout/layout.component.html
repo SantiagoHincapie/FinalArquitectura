@@ -1,11 +1,12 @@
 <div class="grid p-2">
-    <div class="col-12 h-screen">
-        <log-in (enviarData)="recibirData($event)"></log-in>
-    </div>
+  <div class="col-12 h-screen" *ngIf="!existencia;else existe">
+    <log-in (enviarData)="recibirData($event)"></log-in>
+  </div>
 
+  <ng-template #existe>
     <div>
-        <!-- TODO: Tarjeta de verificacion-->
-        <mensaje></mensaje><h1>{{cedula}}</h1>
-        
-    </div>
+        <!-- Tarjeta de verificacion-->
+        <mensaje></mensaje>
+      </div>
+  </ng-template>
 </div>
