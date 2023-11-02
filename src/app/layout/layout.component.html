@@ -1,6 +1,6 @@
-<div class="grid p-2">
+<div class="grid p-2 container">
   <div class="col-12 h-screen" *ngIf="!existencia;else existe">
-    <log-in (enviarData)="recibirData($event)"></log-in>
+    <log-in (enviarData)="recibirData($event)" [visible]="visible"></log-in>
   </div>
 
   <ng-template #existe>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataService } from 'src/app/services/data.service';
 import { Ciudadano, Data } from '../../interfaces/data.interface';
@@ -11,6 +11,9 @@ import { Ciudadano, Data } from '../../interfaces/data.interface';
 export class LogInComponent {
   @Output()
   enviarData = new EventEmitter<number>();
+
+  @Input()
+  public visible: boolean=false
 
   public cedula?: number;
 

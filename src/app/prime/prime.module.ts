@@ -5,8 +5,8 @@ import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
-import { ConfirmDialogModule } from 'primeng/confirmdialog';
-import { ConfirmationService } from 'primeng/api';
+
+
 
 
 
@@ -21,8 +21,7 @@ import { ConfirmationService } from 'primeng/api';
     InputTextModule,
     ButtonModule,
     DialogModule,
-    ConfirmDialogModule
   ],
-  providers:[ConfirmationService]
+  providers:[]
 })
 export class PrimeModule { }

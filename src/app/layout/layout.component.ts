@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { Ciudadano } from '../interfaces/data.interface';
-import { ConfirmationService, MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-layout',
@@ -13,13 +12,11 @@ export class LayoutComponent implements OnInit {
   public ciudadanos: Ciudadano[] = [];
 
   public existencia: boolean = false;
+  public visible: boolean = false;
 
   public datos = this.data.getData();
 
-  constructor(
-    private data: DataService,
-    private confirmationService: ConfirmationService
-  ) {}
+  constructor(private data: DataService) {}
 
   //IMPORTANTE
   ngOnInit(): void {
@@ -41,22 +38,13 @@ export class LayoutComponent implements OnInit {
         return;
       } else {
         console.log('El usuario ingresado no existe');
+        this.visible = true;
         return;
       }
     }
   }
 
-  /* confirmar() {
-    this.confirmationService.confirm({
-      message: '¿Estás seguro de que quieres realizar esta acción?',
-      accept: () => {
-        // Lógica a ejecutar si se confirma
-        console.log('Acción confirmada');
-      },
-      reject: () => {
-        // Lógica a ejecutar si se cancela
-        console.log('Acción cancelada');
-      },
-    });
-  } */
+  alerta() {
+    this.visible = true;
+  }
 }
